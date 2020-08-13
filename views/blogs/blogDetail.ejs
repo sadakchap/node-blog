@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs', { title }) %>
+    <link rel="stylesheet" href="/css/blogDetail.css">
+</head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+
+    <main>
+        <div class="details content">
+            <h1><%= blog.title %></h1>
+            <div class="blog-detail">
+                <p>
+                    <%= blog.description %>
+                </p>
+            </div>
+            <div class="blog-author">
+                <p><a href="#">- Author</a> </p>
+            </div>
+            <div class="blog-timestamps">
+                <p>Created At: <%= moment(blog.createdAt).format('MMM DD, YYYY')%></p>
+                <p>Update At: <%= moment(blog.updatedAt).format('MMM DD, YYYY')%></p>
+            </div>
+        </div>
+    </main>
+
+    <%- include('../partials/footer.ejs')%>
+
+</body>
+</html>

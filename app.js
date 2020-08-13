@@ -17,7 +17,7 @@ connectDB()
     })
 
 app.get('/', (req, res) => {
-    res.render('home', { title: 'Home'});
+    res.redirect('blogs')
 });
 
 app.get('/about', (req, res) => {
