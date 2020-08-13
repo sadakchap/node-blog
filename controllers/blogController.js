@@ -1,7 +1,6 @@
 const Blog = require("../models/Blog");
 const moment = require("moment");
 
-
 /**
  * @description GET route for showing all blogs
  * @route   GET /blogs
@@ -37,6 +36,35 @@ module.exports.getBlogById = async (req, res) => {
     }
 };
 
+/**
+ * @description route for showing create form blog
+ * @route   GET /blogs/create
+ */
+module.exports.createBlog = (req, res) => {
+    res.render('blogs/createForm', { title: 'New Blog' })
+}
+
+/**
+ * @description route for saving form data in DB
+ * @route   POST /blogs/create
+ */
+module.exports.saveNewBlog = async (req, res) => {
+    try {
+        const newBlog = Blog(req.body);
+        const result = await newBlog.save();
+        res.status(200).json({
+            success: true,
+            blog: result
+        });
+    } catch (err) {
+        console.log('ERROR OCCURED WHILE CREATING NEW BLOG');
+        console.log(err);
+        res.status(400).json({
+            error: 'Oops! I dont know what just happened'
+        })
+    }
+};
+
 module.exports.createDummyBlog = async(req, res) => {
     const newBlog = new Blog({
       title: "My new awesome blog 3",
@@ -56,5 +84,4 @@ module.exports.createDummyBlog = async(req, res) => {
           error: "Oops, something went wrong!",
         });
     }
-
 }

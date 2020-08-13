@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs', { title }) %>
+    <link rel="stylesheet" href="/css/createForm.css">
+</head>
+
+<body>
+    <%- include('../partials/header.ejs')%>
+
+    <main>
+        <div class="create content">
+            <div class="form-outer">
+                <h3>Create something new</h3>
+                <form action="/blogs/create" method="post">
+                    <div class="form-group">
+                        <label for="">Title</label>
+                        <input type="text" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Description</label>
+                        <textarea type="text" name="description"> </textarea>
+                    </div>
+                    <div class="form-group">
+                        <select name="status" id="">
+                            <option value="private" selected >Draft</option>
+                            <option value="public">Publish</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="create-btn">Save</button>
+                    
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <%- include('../partials/footer.ejs')%>
+
+</body>
+
+</html>

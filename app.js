@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const connectDB = require('./config/db');
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 // register view engine as ejs
 app.set('view engine', 'ejs');
