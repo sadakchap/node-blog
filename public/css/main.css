@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lemonada:wght@300;500&family=Poppins:wght@300;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    padding: 4% 5%;
+    justify-content: space-between;
+    align-content: center;
+}
+nav .site-logo{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+nav .site-logo h2{
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #ff8e64;
+    font-family: 'Lemonada', cursive;;
+}
+nav .site-logo p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #a2a2a2;
+    text-align: right;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    font-family: 'Dancing Script', cursive;
+
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a {
+    display: inline-block;
+    /* margin: 0 .5em; */
+    padding: .7em 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .89em;
+    font-weight: 400;
+    color: #7b7575;
+    letter-spacing: 1px;
+    transition: .5s;
+    border: none;
+}
+nav ul li a:hover,
+nav ul li a:active{
+    background-color: #ff8e64;
+    color: white;
+}
+
+.content{
+    width: 100%;
+    padding: 0 5%;
+}
+.about h1{
+    font-weight: 500;
+}
+.about > p{
+    margin: 1em auto;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+.footer{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #a2a2a2;
+    font-family: 'Lemonada', cursive;
+    font-size: .7rem;
+    font-weight: 300;
+}
