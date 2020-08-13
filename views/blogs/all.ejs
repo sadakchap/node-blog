@@ -3,6 +3,7 @@
 
 <head>
     <%- include('../partials/head.ejs', { title }) %>
+    <link rel="stylesheet" href="/css/blogList.css">
 </head>
 
 <body>
@@ -11,7 +12,24 @@
     <main>
         <div class="blogs content">
             <h1>Explore Blogs</h1>
-            
+            <div class="blog-list">
+                <% blogs.forEach(blog => { %>
+                    <a href="/blogs/<%= blog._id %>" class="blog-card-link">
+                        <div class="blog-card">
+                            <div class="blog-card-header">
+                                <h3><%= blog.title %></h3>
+                            </div>
+                            <div class="blog-card-body">
+                                <p><%= blog.description.substring(0, 280) %></p>
+                            </div>
+                            <div class="blog-card-footer">
+                                <p><%= moment(blog.createdAt).format('MMM DD, YYYY') %></p>
+                                <p>author</p>
+                            </div>
+                        </div>
+                    </a>
+                <%}) %>
+            </div>
         </div>
     </main>
 
