@@ -17,10 +17,33 @@
     border: none;
     outline: none;
 }
-.blog-timestamps{
+.blog-more-details{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: .8em;
     font-weight: 300;
+}
+.blog-more-details div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.blog-more-details div p {
+    margin: 0 1em;
+}
+.edit-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    text-decoration: none;
+    color: #a2a2a2;
+    text-align: right;
+    border: none;
+    font-size: 1rem;
+    transition: .5s;
+}
+.edit-btn:hover{
+    box-shadow: 0 0 10px #a2a2a2;
 }
