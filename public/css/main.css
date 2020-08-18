@@ -78,6 +78,7 @@ nav ul li a:active{
     font-weight: 500;
     text-transform: capitalize;
     text-align: center;
+    position: relative;
 }
 .about h1{
     font-weight: 500;
@@ -95,4 +96,28 @@ nav ul li a:active{
     font-family: 'Lemonada', cursive;
     font-size: .7rem;
     font-weight: 300;
+}
+.text-capitalize{
+    text-transform: capitalize;
+}
+.btn-secondary{
+    display: inline-block;
+    margin: .5em;
+    padding: 10px 17px;
+    border: 1px solid #f1efef;
+    color: #ff8e64;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #f1efef;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+    outline: none;
+    font-weight: 500;
+}
+.btn-secondary:hover{
+    border: 1px solid #ff8e64;
+    color: #f1efef;
+    background-color: #ff8e64;
 }
